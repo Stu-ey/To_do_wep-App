@@ -3,7 +3,6 @@ import functions
 
 todos = functions.get_todos()
 
-
 def add_todo():
     todo_a = st.session_state["new_todo"] + "\n"
     todos.append(todo_a)
@@ -13,6 +12,7 @@ def add_todo():
 st.title("My 'To-do' App")
 st.subheader("This is very basic!")
 st.write("Hopefully you be more productive!!")
+
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
